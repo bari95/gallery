@@ -1,3 +1,4 @@
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -101,36 +102,43 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           ))}
         </div>
       </main>
-      <footer className="p-6 text-center text-white/80 sm:p-12">
-        Thank you to{" "}
-        <a
-          href="https://edelsonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Josh Edelson
-        </a>
-        ,{" "}
-        <a
-          href="https://www.newrevmedia.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Jenny Morgan
-        </a>
-        , and{" "}
-        <a
-          href="https://www.garysextonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Gary Sexton
-        </a>{" "}
-        for the pictures.
-      </footer>
+      <footer className="p-8 text-center text-white/80 sm:p-12 bg-black/90 backdrop-blur-lg">
+  <p className="text-lg">
+    A special thank you to our talented photographers:  
+  </p>
+  <div className="flex flex-wrap justify-center gap-4 mt-3 text-base font-medium">
+    <a
+      href="https://edelsonphotography.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="hover:text-white transition"
+    >
+      Josh Edelson
+    </a>
+    <span>|</span>
+    <a
+      href="https://www.newrevmedia.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="hover:text-white transition"
+    >
+      Jenny Morgan
+    </a>
+    <span>|</span>
+    <a
+      href="https://www.garysextonphotography.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="hover:text-white transition"
+    >
+      Gary Sexton
+    </a>
+  </div>
+  <p className="mt-4 text-sm opacity-75">
+    © {new Date().getFullYear()} Future Holders. All rights reserved.
+  </p>
+</footer>
+
     </>
   );
 };

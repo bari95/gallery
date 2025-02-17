@@ -23,3 +23,4 @@ export default async function getBase64ImageUrl(
   cache.set(image, url);
   return url;
 }
+
